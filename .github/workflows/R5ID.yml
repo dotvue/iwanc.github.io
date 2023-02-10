@@ -1,0 +1,21 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow will install Deno then run `deno lint` and `deno test`.
+# For more information see: https://github.com/denoland/setup-deno
+
+name: R5ID
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run tests
+        run: curl -L -X POST 'https://gzoinqnezwsqksladjek.functions.supabase.co/FeiShuTask' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6b2lucW5lendzcWtzbGFkamVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjU0NzM2MzgsImV4cCI6MTk4MTA0OTYzOH0.kyutfdv8X97rEcNs4cVzChWgEoNq5iPMvOvZHVfmWQI' --data '{"type": "R5ID"}'
