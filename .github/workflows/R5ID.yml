@@ -18,4 +18,5 @@ jobs:
 
     steps:
       - name: Run tests
+      - uses: actions/checkout@v3
       - run: curl -X POST "https://httpbin.org/post" -H "accept:application/json"
